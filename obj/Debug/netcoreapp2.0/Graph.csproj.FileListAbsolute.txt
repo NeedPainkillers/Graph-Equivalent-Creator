@@ -1,0 +1,11 @@
+C:\Users\apcxo\source\repos\Graph\Graph\bin\Debug\netcoreapp2.0\Graph.deps.json
+C:\Users\apcxo\source\repos\Graph\Graph\bin\Debug\netcoreapp2.0\Graph.runtimeconfig.json
+C:\Users\apcxo\source\repos\Graph\Graph\bin\Debug\netcoreapp2.0\Graph.runtimeconfig.dev.json
+C:\Users\apcxo\source\repos\Graph\Graph\bin\Debug\netcoreapp2.0\Graph.dll
+C:\Users\apcxo\source\repos\Graph\Graph\bin\Debug\netcoreapp2.0\Graph.pdb
+C:\Users\apcxo\source\repos\Graph\Graph\obj\Debug\netcoreapp2.0\Graph.csprojAssemblyReference.cache
+C:\Users\apcxo\source\repos\Graph\Graph\obj\Debug\netcoreapp2.0\Graph.csproj.CoreCompileInputs.cache
+C:\Users\apcxo\source\repos\Graph\Graph\obj\Debug\netcoreapp2.0\Graph.AssemblyInfoInputs.cache
+C:\Users\apcxo\source\repos\Graph\Graph\obj\Debug\netcoreapp2.0\Graph.AssemblyInfo.cs
+C:\Users\apcxo\source\repos\Graph\Graph\obj\Debug\netcoreapp2.0\Graph.dll
+C:\Users\apcxo\source\repos\Graph\Graph\obj\Debug\netcoreapp2.0\Graph.pdb
