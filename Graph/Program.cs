@@ -165,11 +165,6 @@ namespace Graph
                 temp = null;
             }
 
-            foreach (Vertex from in newGraph)
-            {
-                
-            }
-
             return newGraph;
         }
 
