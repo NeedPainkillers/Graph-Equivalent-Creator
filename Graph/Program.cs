@@ -8,54 +8,67 @@ namespace Graph
     {
         static void Main(string[] args)
         {
-            //List<Vertex> vertices = new List<Vertex>
-            //{
-            //    new Vertex { Name = 1 },
-            //    new Vertex { Name = 2 },
-            //    new Vertex { Name = 3 },
-            //    new Vertex { Name = 4 },
-            //    new Vertex { Name = 5 }
-            //};
-            //vertices.Find(x => x.Name.Equals(1)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(2) || x.Name.Equals(3)));
-            //vertices.Find(x => x.Name.Equals(2)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(3) || x.Name.Equals(4) || x.Name.Equals(5)));
-            //vertices.Find(x => x.Name.Equals(3)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(4)));
-            //vertices.Find(x => x.Name.Equals(4)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(5)));
-
-            //var Graph = CreateEquivalentGraph(ref vertices);
-
             List<Vertex> vertices = new List<Vertex>
             {
-                new Vertex { Name = 0, Status = 0 },
-                new Vertex { Name = 1, Status = 1 },
-                new Vertex { Name = 2, Status = 2 },
-                new Vertex { Name = 3, Status = 3 },
-                new Vertex { Name = 4, Status = 4 },
-                new Vertex { Name = 5, Status = 5 },
-                new Vertex { Name = 6, Status = 6 },
-                new Vertex { Name = 7, Status = 7 },
-                new Vertex { Name = 8, Status = 8 },
-                new Vertex { Name = 9, Status = 9 }
-                
+                new Vertex { Name = 1 },
+                new Vertex { Name = 2 },
+                new Vertex { Name = 3 },
+                new Vertex { Name = 4 },
+                new Vertex { Name = 5 }
             };
-            vertices.Find(x => x.Name.Equals(0)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(4) || x.Name.Equals(9)));
-            vertices.Find(x => x.Name.Equals(1)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(3) || x.Name.Equals(4) || x.Name.Equals(6) || x.Name.Equals(8)));
-            vertices.Find(x => x.Name.Equals(2)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(6) || x.Name.Equals(7)));
-            vertices.Find(x => x.Name.Equals(3)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(9)));
-            vertices.Find(x => x.Name.Equals(4)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(5) || x.Name.Equals(9)));
-            vertices.Find(x => x.Name.Equals(5)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(7) || x.Name.Equals(9)));
-            vertices.Find(x => x.Name.Equals(6)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(9)));
-            vertices.Find(x => x.Name.Equals(7)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(9)));
+            vertices.Find(x => x.Name.Equals(1)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(2) || x.Name.Equals(3)));
+            vertices.Find(x => x.Name.Equals(2)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(3) || x.Name.Equals(4) || x.Name.Equals(5)));
+            vertices.Find(x => x.Name.Equals(3)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(4) || x.Name.Equals(1)));
+            vertices.Find(x => x.Name.Equals(4)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(5)));
+
+            ////var Graph = CreateEquivalentGraph(ref vertices);
+
+            //List<Vertex> vertices = new List<Vertex>
+            //{
+            //    new Vertex { Name = 0, Status = 0 },
+            //    new Vertex { Name = 1, Status = 1 },
+            //    new Vertex { Name = 2, Status = 2 },
+            //    new Vertex { Name = 3, Status = 3 },
+            //    new Vertex { Name = 4, Status = 4 },
+            //    new Vertex { Name = 5, Status = 5 },
+            //    new Vertex { Name = 6, Status = 6 },
+            //    new Vertex { Name = 7, Status = 7 },
+            //    new Vertex { Name = 8, Status = 8 },
+            //    new Vertex { Name = 9, Status = 9 }
+
+            //};
+            //vertices.Find(x => x.Name.Equals(0)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(4) || x.Name.Equals(9)));
+            //vertices.Find(x => x.Name.Equals(1)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(3) || x.Name.Equals(4) || x.Name.Equals(6) || x.Name.Equals(8)));
+            //vertices.Find(x => x.Name.Equals(2)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(6) || x.Name.Equals(7)));
+            //vertices.Find(x => x.Name.Equals(3)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(9)));
+            //vertices.Find(x => x.Name.Equals(4)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(5) || x.Name.Equals(9)));
+            //vertices.Find(x => x.Name.Equals(5)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(7) || x.Name.Equals(9)));
+            //vertices.Find(x => x.Name.Equals(6)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(9)));
+            //vertices.Find(x => x.Name.Equals(7)).Voisins.AddRange(vertices.FindAll(x => x.Name.Equals(9)));
 
             //var Graph = CreateEquivalentGraph(ref vertices);
 
             var Graph = CreateMinEqGraph(ref vertices);
 
-            foreach (var item in Graph)
+            foreach (var item in vertices)
             {
+                Console.Write(item.Name.ToString() + ": ");
                 foreach (var voisin in item.Voisins)
                 {
-                    System.Console.WriteLine(item.Name.ToString() + voisin.Name.ToString());
+                    Console.Write(voisin.Name.ToString() + " ");
                 }
+                Console.WriteLine();
+            }
+            Console.WriteLine("-------");
+
+            foreach (var item in Graph)
+            {
+                Console.Write(item.Name.ToString() + ": ");
+                foreach (var voisin in item.Voisins)
+                {
+                    System.Console.Write(voisin.Name.ToString() + " ");
+                }
+                Console.WriteLine();
             }
         }
 
